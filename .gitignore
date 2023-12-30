@@ -3,9 +3,11 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# NuGet
+dist/
+
 # MSTest
 coverage/
-
 # dotenv files
 .env
 

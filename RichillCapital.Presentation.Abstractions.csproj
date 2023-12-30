@@ -1,10 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="./Solution.Build.props"/>
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <PackageId>RichillCapital.Presentation.Abstractions</PackageId>
+    <Version>1.0.0</Version>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="coverage\**" />
+    <Compile Remove="dist\**" />
+    <Compile Remove="Tests\**" />
+    <EmbeddedResource Remove="coverage\**" />
+    <EmbeddedResource Remove="dist\**" />
+    <EmbeddedResource Remove="Tests\**" />
+    <None Remove="coverage\**" />
+    <None Remove="dist\**" />
+    <None Remove="Tests\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove=".gitignore" />
@@ -13,6 +25,10 @@
     <None Remove="Solution.Build.props" />
     <None Remove="Solution.ruleset" />
     <None Remove="Solution.Tests.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
 
 </Project>
