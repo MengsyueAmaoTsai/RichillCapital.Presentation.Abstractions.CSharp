@@ -27,6 +27,14 @@
     <None Remove="Solution.Tests.props" />
   </ItemGroup>
 
+ <ItemGroup Condition="'$(Configuration)' == 'Debug'">
+    <ProjectReference Include="..\..\RichillCapital.Packages\RichillCapital.Extensions.Primitives.CSharp\RichillCapital.Extensions.Primitives.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(Configuration)' == 'Release'">
+    <PackageReference Include="RichillCapital.Extensions.Primitivese" Version="1.0.5" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
