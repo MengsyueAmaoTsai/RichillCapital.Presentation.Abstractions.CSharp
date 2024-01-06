@@ -28,11 +28,11 @@
   </ItemGroup>
 
  <ItemGroup Condition="'$(Configuration)' == 'Debug'">
-    <ProjectReference Include="..\..\RichillCapital.Packages\RichillCapital.Extensions.Primitives.CSharp\RichillCapital.Extensions.Primitives.csproj" />
+    <ProjectReference Include="..\RichillCapital.Extensions.Primitives.CSharp\RichillCapital.Extensions.Primitives.csproj" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(Configuration)' == 'Release'">
-    <PackageReference Include="RichillCapital.Extensions.Primitives" Version="1.0.8" />
+    <PackageReference Include="RichillCapital.Extensions.Primitives" Version="1.0.9" />
   </ItemGroup>
 
   <ItemGroup>
