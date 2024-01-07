@@ -13,7 +13,8 @@ public abstract class EndpointBase : ControllerBase
         {
             ErrorType.Invalid => BadRequest(error.Message),
             ErrorType.NotFound => NotFound(error.Message),
-            ErrorType.Conflict => BadRequest(error.Message),
+            ErrorType.Conflict => Conflict(error.Message),
+            ErrorType.Forbidden => Forbid(error.Message),
             ErrorType.Unauthorized => Unauthorized(error.Message),
             ErrorType.Default => throw new NotImplementedException(),
             ErrorType.Null => throw new NotImplementedException(),
